@@ -32,7 +32,7 @@ export const duration = (ms: number, scheduler = animationFrame) => {
 };
 
 export const makeUrl = (service: string, name: string, time: string) => {
-  const url = new URL('https://neo.sci.gsfc.nasa.gov/wms/wms');
+  const url = new URL('https://neo.gsfc.nasa.gov/wms/wms');
   url.searchParams.set('service', service);
   url.searchParams.set('request', 'GetMap');
   url.searchParams.set('version', '1.3.0');

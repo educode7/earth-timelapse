@@ -8,7 +8,7 @@ export class WorldWindCapabilitiesService implements Resolve<Document> {
   constructor(private databaseService: DatabaseService) { }
 
   async fetchCapabilities() {
-    const r = await fetch('https://neo.sci.gsfc.nasa.gov/wms/wms?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.3.0');
+    const r = await fetch('https://neo.gsfc.nasa.gov/wms/wms?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.3.0');
     const t = await r.text();
     this.databaseService.saveOnCaches('capabilities', t);
     return t;
