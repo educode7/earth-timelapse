@@ -345,15 +345,21 @@ export class TimelapseComponent implements AfterViewInit, OnDestroy, OnInit {
 
   search() {
     const queryString = this.searchForm.value.text;
+    console.log(queryString);
     if (queryString) {
+      console.log(1);
       if (queryString.match(WorldWind.WWUtil.latLonRegex)) {
+        console.log("1.1");
         const tokens = queryString.split(',');
         const latitude = parseFloat(tokens[0]);
         const longitude = parseFloat(tokens[1]);
         this.wwd.goTo(new WorldWind.Location(latitude, longitude));
       } else {
+        console.log("1.2");
         this.geocoder.lookup(queryString, (geocoder: any, result: any) => {
           if (result.length > 0) {
+            console.log("1.2.1");
+            console.log(result);
             const latitude = parseFloat(result[0].lat);
             const longitude = parseFloat(result[0].lon);
 

@@ -38,12 +38,12 @@ export function getRandomColor(): [number, number, number] {
 
 export function formatColor(colors: Color) {
   return {
-    backgroundColor: rgba(colors, 0.4),
-    borderColor: rgba(colors, 1),
-    pointBackgroundColor: rgba(colors, 1),
+    backgroundColor: rgba([18, 243, 68], 0.4),
+    borderColor: rgba([18, 243, 68], 1),
+    pointBackgroundColor: rgba([18, 243, 68], 1),
     pointBorderColor: '#fff',
     pointHoverBackgroundColor: '#fff',
-    pointHoverBorderColor: rgba(colors, 0.8)
+    pointHoverBorderColor: rgba([18, 243, 68], 0.8)
   };
 }
 

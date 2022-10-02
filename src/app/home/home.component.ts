@@ -71,8 +71,8 @@ export class HomeComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
-    const wwd = new WorldWind.WorldWindow('stars');
-    wwd.addLayer(new WorldWind.StarFieldLayer());
+    //const wwd = new WorldWind.WorldWindow('stars');
+    //wwd.addLayer(new WorldWind.StarFieldLayer());
   }
 
   workLayers(xml: Document): Group[] {
